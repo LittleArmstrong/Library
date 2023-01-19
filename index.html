@@ -5,9 +5,55 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       <link rel="stylesheet" href="styles/style.css" />
-      <title>Titel</title>
+      <title>Library</title>
    </head>
    <body>
+      <h1>Library</h1>
+      <main>
+         <article class="new-book">
+            <form action="" class="hide" id="add-book-form">
+               <div class="field">
+                  <label for="add-book-title">Book title</label>
+                  <input type="text" name="title" id="add-book-title" />
+               </div>
+               <div class="field">
+                  <label for="add-book-author">Author</label>
+                  <input type="text" name="author" id="add-book-author" />
+               </div>
+               <div class="field">
+                  <label for="add-book-pages">Pages</label>
+                  <input type="text" name="pages" id="add-book-pages" />
+               </div>
+               <div class="field">
+                  <label for="add-book-read">Has been read</label>
+                  <input type="text" name="read" id="add-book-read" />
+               </div>
+               <div class="field">
+                  <button type="submit" id="add-book-btn">Save</button>
+                  <button id="cancel-book-form">Cancel</button>
+               </div>
+            </form>
+            <button id="show-book-form">
+               <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  class="feather feather-plus-circle"
+               >
+                  <circle cx="12" cy="12" r="10"></circle>
+                  <line x1="12" y1="8" x2="12" y2="16"></line>
+                  <line x1="8" y1="12" x2="16" y2="12"></line>
+               </svg>
+            </button>
+         </article>
+      </main>
+
       <script src="scripts/main.js" type="module"></script>
    </body>
 </html>

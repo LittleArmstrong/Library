@@ -9,3 +9,21 @@ html {
    margin: 0;
    padding: 0;
 }
+
+main {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(200px, 250px));
+   grid-gap: 5px;
+}
+
+main article {
+   border: 1px solid black;
+}
+
+main article p {
+   text-align: center;
+}
+
+.hide {
+   display: none;
+}
