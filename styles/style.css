@@ -10,20 +10,82 @@ html {
    padding: 0;
 }
 
-main {
-   display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(200px, 250px));
-   grid-gap: 5px;
-}
-
-main article {
-   border: 1px solid black;
-}
-
-main article p {
-   text-align: center;
+h1 {
+   margin-left: 5px;
 }
 
 .hide {
    display: none;
+}
+
+main {
+   display: grid;
+   grid-template-columns: repeat(auto-fit, minmax(min-content, 250px));
+   grid-gap: 5px;
+   margin-left: 10px;
+   margin-top: 10px;
+   overflow-y: auto;
+}
+
+main article {
+   height: 250px;
+}
+
+main article.book {
+   border: 2px solid black;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   background-color: rgb(255, 208, 107);
+}
+
+main article.book p.book-title {
+   font-weight: bold;
+}
+
+main article.book p.book-author {
+   font-style: italic;
+}
+
+main article.book p.book-author::before {
+   content: "by ";
+}
+
+main article.book p.book-pages::after {
+   content: " pages";
+}
+
+main article.new-book {
+   position: relative;
+   border: 2px dashed black;
+}
+
+main article form div.form-container {
+   display: flex;
+   height: 100%;
+   flex-direction: column;
+   justify-content: center;
+   align-items: start;
+}
+
+main article form.new-book-form {
+   height: 100%;
+   padding: 20px;
+}
+
+main article form div.field {
+   margin-bottom: 10px;
+}
+
+main button.btn-show-form {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translateY(-50%) translateX(-50%);
+   border: none;
+   background: none;
+   width: 100%;
+   height: 100%;
+   cursor: pointer;
 }

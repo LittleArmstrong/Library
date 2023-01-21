@@ -9,31 +9,9 @@
    </head>
    <body>
       <h1>Library</h1>
-      <main>
-         <article class="new-book">
-            <form action="" class="hide" id="add-book-form">
-               <div class="field">
-                  <label for="add-book-title">Book title</label>
-                  <input type="text" name="title" id="add-book-title" />
-               </div>
-               <div class="field">
-                  <label for="add-book-author">Author</label>
-                  <input type="text" name="author" id="add-book-author" />
-               </div>
-               <div class="field">
-                  <label for="add-book-pages">Pages</label>
-                  <input type="text" name="pages" id="add-book-pages" />
-               </div>
-               <div class="field">
-                  <label for="add-book-read">Has been read</label>
-                  <input type="text" name="read" id="add-book-read" />
-               </div>
-               <div class="field">
-                  <button type="submit" id="add-book-btn">Save</button>
-                  <button id="cancel-book-form">Cancel</button>
-               </div>
-            </form>
-            <button id="show-book-form">
+      <main id="library">
+         <article class="new-book" id="new-book">
+            <button class="btn-show-form" id="btn-show-form">
                <svg
                   xmlns="http://www.w3.org/2000/svg"
                   width="24"
@@ -51,9 +29,32 @@
                   <line x1="8" y1="12" x2="16" y2="12"></line>
                </svg>
             </button>
+            <form action="" class="new-book-form hide" id="new-book-form">
+               <div class="form-container">
+                  <div class="field">
+                     <label for="new-book-title">Book title</label><br />
+                     <input type="text" name="title" id="new-book-title" required />
+                  </div>
+                  <div class="field">
+                     <label for="new-book-author">Author</label><br />
+                     <input type="text" name="author" id="new-book-author" required />
+                  </div>
+                  <div class="field">
+                     <label for="new-book-pages">Pages</label><br />
+                     <input type="number" name="pages" id="new-book-pages" required />
+                  </div>
+                  <div class="field">
+                     <label for="new-book-read">Has been read</label><br />
+                     <input type="checkbox" name="read" value="true" id="new-book-read" />
+                  </div>
+                  <div class="field">
+                     <button type="submit" id="new-book-btn">Save</button>
+                     <button type="reset" id="cancel-book-form">Cancel</button>
+                  </div>
+               </div>
+            </form>
          </article>
       </main>
-
       <script src="scripts/main.js" type="module"></script>
    </body>
 </html>
